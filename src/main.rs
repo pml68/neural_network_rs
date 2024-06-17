@@ -30,5 +30,4 @@ fn main() {
 
     let output = activation2.output.unwrap();
     println!("{}", output);
-    println!("{}", layer2.weights);
 }

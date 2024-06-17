@@ -1,3 +1,4 @@
+use crate::layers::Layer;
 use ndarray::{Array, Array1, Array2};
 use ndarray_rand::{rand_distr::Uniform, RandomExt};
 
@@ -20,3 +21,5 @@ impl DenseLayer {
         self.output = Some(inputs.dot(&self.weights.t()) + &self.biases);
     }
 }
+
+impl Layer for DenseLayer {}

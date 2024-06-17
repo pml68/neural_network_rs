@@ -1,3 +1,4 @@
+use crate::layers::Layer;
 use ndarray::Array2;
 
 pub struct ActivationReLU {
@@ -21,3 +22,5 @@ impl ActivationReLU {
         self.output = Some(inputs.mapv(|c| relu(c)));
     }
 }
+
+impl Layer for ActivationReLU {}
