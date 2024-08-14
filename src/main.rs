@@ -23,11 +23,7 @@ fn main() {
     let mut activation1 = ActivationReLU::new();
     let mut layer2 = DenseLayer::new(8, 8);
     let mut activation2 = ActivationReLU::new();
-    let mut layer3 = DenseLayer::new(8, 4); //{
-                                            //    weights,
-                                            //    biases,
-                                            //    output: None,
-                                            //};
+    let mut layer3 = DenseLayer::new(8, 4); // from(weights, biases);
     let mut activation3 = ActivationSoftmax::new();
 
     layer1.forward(inputs);

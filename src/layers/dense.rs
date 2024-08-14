@@ -17,6 +17,14 @@ impl DenseLayer {
         }
     }
 
+    pub fn from(weights: Array2<f64>, biases: Array1<f64>) -> Self {
+        Self {
+            weights,
+            biases,
+            output: None,
+        }
+    }
+
     pub fn forward(&mut self, inputs: Array2<f64>) {
         self.output = Some(inputs.dot(&self.weights.t()) + &self.biases);
     }
